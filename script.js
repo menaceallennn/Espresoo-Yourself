@@ -81,7 +81,6 @@ navLinks?.querySelectorAll("a").forEach(a => {
 });
 
 // Form demo: creates an email draft using mailto:
-function handleSubmit(e){
   e.preventDefault();
 
   const data = new FormData(e.target);
@@ -116,12 +115,6 @@ Thank you!`
   return false;
 }
 
-// Email button
-const emailBtn = document.getElementById("emailBtn");
-emailBtn?.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Event Booking Inquiry")}`;
-});
 
 // Footer year
 const yearEl = document.getElementById("year");
