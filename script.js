@@ -1,4 +1,4 @@
-const EMAIL = "espressoyourself@email.com";
+const EMAIL = "espressoxavier@gmail.com";
 
 const menu = {
   signature: [
@@ -34,12 +34,14 @@ const menu = {
   ]
 };
 
-function renderMenu(tabKey){
+function renderMenu(tabKey) {
   const grid = document.getElementById("menuGrid");
   if (!grid) return;
+
+  const items = menu[tabKey] || [];
   grid.innerHTML = "";
 
-  menu[tabKey].forEach(item => {
+  items.forEach(item => {
     const div = document.createElement("div");
     div.className = "item";
     div.innerHTML = `
@@ -49,13 +51,14 @@ function renderMenu(tabKey){
       </div>
       <p class="itemDesc">${item.desc}</p>
       <div class="badges">
-        ${item.tags.map(t => `<span class="badgePill">${t}</span>`).join("")}
+        ${Array.isArray(item.tags) ? item.tags.map(t => `<span class="badgePill">${t}</span>`).join("") : ""}
       </div>
     `;
     grid.appendChild(div);
   });
 }
 
+// Tabs
 document.querySelectorAll(".tab").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
@@ -68,53 +71,19 @@ document.querySelectorAll(".tab").forEach(btn => {
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("show");
-  menuBtn.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks?.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-    menuBtn.setAttribute("aria-expanded", "false");
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
   });
-});
 
-// Form demo: creates an email draft using mailto:
-  e.preventDefault();
-
-  const data = new FormData(e.target);
-  const name = (data.get("name") || "").toString().trim();
-  const email = (data.get("email") || "").toString().trim();
-  const date = (data.get("date") || "").toString().trim();
-  const type = (data.get("type") || "").toString().trim();
-  const location = (data.get("location") || "").toString().trim();
-  const message = (data.get("message") || "").toString().trim();
-
-  const subject = encodeURIComponent(`Event Request: ${type || "Event"} — ${name || "New inquiry"}`);
-  const body = encodeURIComponent(
-`Hi Espresso Yourself!
-
-Name: ${name}
-Email: ${email}
-Event type: ${type}
-Event date: ${date}
-Location: ${location}
-
-Details:
-${message}
-
-Thank you!`
-  );
-
-  const mailto = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  window.location.href = mailto;
-
-  const note = document.getElementById("formNote");
-  if (note) note.textContent = "Opening your email app to send your request 💌";
-  return false;
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
 }
-
 
 // Footer year
 const yearEl = document.getElementById("year");

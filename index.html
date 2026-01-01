@@ -3,377 +3,282 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Espresso Yourself | Mobile Coffee Bar</title>
-  <meta name="description" content="Espresso Yourself is a mobile coffee bar for events. Cute setups, handcrafted drinks, and good vibes only." />
+  <title>Espresso Yourself</title>
+  <meta name="description" content="A mobile coffee bar for events, pop-ups, and special moments. Cute, aesthetic, and handcrafted drinks." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Espresso Yourself">
-        <span class="brand__mark">☕</span>
-        <span class="brand__text">Espresso Yourself</span>
+      <a class="logo" href="index.html">
+        <span class="logoDot"></span>
+        <span>Espresso Yourself</span>
       </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="navLinks" id="navLinks" aria-label="Primary">
+      <nav class="navLinks">
+        <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#events">Events</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#book">Book</a>
-        <a class="btn btn--small" href="#book">Get a Quote</a>
+        <a class="pill" href="#book">Book</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <!-- HERO -->
     <section class="hero">
       <div class="container heroGrid">
-        <div class="heroText">
-          <p class="pill">Mobile Coffee Bar • Events • Good Vibes Only</p>
+        <div>
+          <p class="tag">mobile coffee bar • san antonio & nearby</p>
           <h1>Coffee, but make it cute.</h1>
           <p class="sub">
-            Espresso Yourself brings handcrafted drinks, aesthetic setups, and cozy energy to your event.
-            Pop-ups, birthdays, bridal showers, brand days — we show up and make it a whole moment.
+            Espresso Yourself brings an aesthetic coffee experience to your event — weddings, birthdays,
+            pop-ups, markets, and everything in between. Pretty drinks. Good vibes. Zero stress.
           </p>
 
-          <div class="heroCtas">
-            <a class="btn" href="#book">Book Your Event</a>
-            <a class="btn btn--ghost" href="#menu">See Menu</a>
+          <div class="ctaRow">
+            <a class="btn" href="#book">Book an event</a>
+            <a class="btn btn--ghost" href="mailto:espressoxavier@gmail.com?subject=Espresso%20Yourself%20Booking%20Inquiry">Email us</a>
           </div>
 
-          <div class="heroStats">
+          <div class="stats">
             <div class="stat">
-              <div class="stat__big">Mobile</div>
-              <div class="stat__small">We come to you</div>
-            </div>
-            <div class="stat">
-              <div class="stat__big">Aesthetic</div>
-              <div class="stat__small">Photo-worthy setup</div>
+              <div class="statTop">✨ Aesthetic setup</div>
+              <div class="statBottom">Photo-ready bar + cute details</div>
             </div>
             <div class="stat">
-              <div class="stat__big">Handcrafted</div>
-              <div class="stat__small">Made with love</div>
+              <div class="statTop">☕ Handcrafted</div>
+              <div class="statBottom">Espresso drinks + refreshers</div>
+            </div>
+            <div class="stat">
+              <div class="statTop">🎉 Events + pop-ups</div>
+              <div class="statBottom">Private + public bookings</div>
             </div>
           </div>
-
-          <div class="taglineRow">
-            <span class="tag">sip pretty</span>
-            <span class="tag">powered by espresso</span>
-            <span class="tag">girls’ day approved</span>
-          </div>
         </div>
 
-        <div class="heroCard" aria-label="Featured drink card">
-          <div class="heroCard__img">
-            <div class="imgTag">Fan Favorite</div>
-          </div>
-          <div class="heroCard__info">
-            <div>
-              <div class="kicker">Try this</div>
-              <div class="title">Brown Sugar Oat Latte</div>
-              <div class="mini">Sweet • smooth • cozy</div>
-            </div>
-            <div class="price">$5.75</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="strip">
-      <div class="container stripGrid">
-        <div class="stripItem">
-          <div class="stripIcon">🎀</div>
-          <div>
-            <div class="stripTitle">Cute setups</div>
-            <div class="stripText">A vibe your guests will post</div>
-          </div>
-        </div>
-        <div class="stripItem">
-          <div class="stripIcon">✨</div>
-          <div>
-            <div class="stripTitle">Starter-friendly</div>
-            <div class="stripText">New business, big energy</div>
-          </div>
-        </div>
-        <div class="stripItem">
-          <div class="stripIcon">📸</div>
-          <div>
-            <div class="stripTitle">Photo moments</div>
-            <div class="stripText">Coffee bar = instant centerpiece</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENU -->
-    <section class="section" id="menu">
-      <div class="container">
-        <div class="sectionHead">
-          <h2>Menu</h2>
-          <p>Pretty drinks. Real flavor. Custom options for events.</p>
-        </div>
-
-        <div class="tabs">
-          <button class="tab active" data-tab="signature">Signature</button>
-          <button class="tab" data-tab="classics">Classics</button>
-          <button class="tab" data-tab="matcha">Matcha + Tea</button>
-          <button class="tab" data-tab="addons">Add-ons</button>
-        </div>
-
-        <div class="menuGrid" id="menuGrid" aria-live="polite"></div>
-
-        <div class="note">
-          <strong>Quick note:</strong> Prices and items are placeholders. Swap them with your real menu anytime.
-        </div>
-      </div>
-    </section>
-
-    <!-- EVENTS -->
-    <section class="section section--alt" id="events">
-      <div class="container eventsGrid">
-        <div class="eventsCard">
-          <h2>Perfect for events</h2>
-          <p class="mutedP">
-            If it’s cute and needs coffee, we’re there. We bring the bar, the setup, the menu, and the energy —
-            so you can enjoy your day and let us handle the espresso.
-          </p>
-
-          <div class="chips">
-            <span class="chip">Bridal showers</span>
-            <span class="chip">Baby showers</span>
-            <span class="chip">Birthdays</span>
-            <span class="chip">Brand pop-ups</span>
-            <span class="chip">Markets</span>
-            <span class="chip">Girls’ nights</span>
-          </div>
-
-          <div class="eventsBtns">
-            <a class="btn btn--small" href="#book">Check availability</a>
-            <a class="btn btn--small btn--ghost" href="#gallery">See the vibe</a>
-          </div>
-        </div>
-
-        <div class="packageGrid">
-          <div class="package">
-            <div class="packageTop">
-              <div class="packageName">Mini Moment</div>
-              <div class="packagePrice">From $</div>
-            </div>
-            <p class="packageDesc">Perfect for smaller gatherings. Cute setup + a tight menu.</p>
-            <ul class="packageList">
-              <li>1–2 hour service</li>
-              <li>2–3 drink options</li>
-              <li>Basic aesthetic setup</li>
+        <div class="heroCard">
+          <div class="glass">
+            <div class="miniTitle">Signature vibe</div>
+            <ul class="miniList">
+              <li>Latte art + cute cups</li>
+              <li>Custom menu for your theme</li>
+              <li>Fast, friendly service</li>
             </ul>
-          </div>
-
-          <div class="package package--featured">
-            <div class="packageTop">
-              <div class="packageName">Main Character</div>
-              <div class="packagePrice">From $$</div>
+            <div class="divider"></div>
+            <div class="miniTitle">Best for</div>
+            <div class="chips">
+              <span class="chip">Weddings</span>
+              <span class="chip">Birthdays</span>
+              <span class="chip">Markets</span>
+              <span class="chip">Bridal showers</span>
+              <span class="chip">Brand pop-ups</span>
             </div>
-            <p class="packageDesc">The coffee bar becomes the centerpiece. Big vibes.</p>
-            <ul class="packageList">
-              <li>2–3 hour service</li>
-              <li>Signature menu options</li>
-              <li>Enhanced aesthetic setup</li>
-            </ul>
-          </div>
-
-          <div class="package">
-            <div class="packageTop">
-              <div class="packageName">Brand Day</div>
-              <div class="packagePrice">Custom</div>
-            </div>
-            <p class="packageDesc">For pop-ups & business events. We can match your theme.</p>
-            <ul class="packageList">
-              <li>Custom menu naming</li>
-              <li>Theme-friendly setup</li>
-              <li>Perfect for photo ops</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container aboutGrid">
-        <div class="aboutCard">
-          <h2>Our vibe</h2>
-          <p>
-            At <strong>Espresso Yourself</strong>, coffee isn’t just a drink — it’s a vibe.
-            We’re just starting, but our goal is big: create moments people actually remember.
-          </p>
-          <p class="mutedP">
-            Whether it’s a brunch with your girls, a bridal shower, or a pop-up,
-            we bring handcrafted drinks and a setup that makes everyone reach for their phone.
-          </p>
-
-          <ul class="checklist">
-            <li>Aesthetic coffee bar setup</li>
-            <li>Milk alternatives included</li>
-            <li>Friendly, warm service</li>
-          </ul>
-
-          <div class="quoteCard">
-            <div class="quoteMark">“</div>
-            <div class="quoteText">More than coffee — it’s a whole moment.</div>
-            <div class="quoteBy">— Espresso Yourself</div>
-          </div>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>About</h2>
+          <p class="muted">We pull up, set up, and serve. You enjoy the moment.</p>
         </div>
 
-        <div class="aboutPhoto" aria-label="Aesthetic photo placeholder">
-          <div class="aboutPhoto__overlay">
-            <div class="badge">
-              <div class="badge__big">Coffee, but make it cute</div>
-              <div class="badge__small">Ask about themed menus ✨</div>
-            </div>
+        <div class="cards3">
+          <div class="card">
+            <h3>Mobile + easy</h3>
+            <p>We come to you with a clean, aesthetic setup that fits your space and your vibe.</p>
+          </div>
+          <div class="card">
+            <h3>Custom options</h3>
+            <p>Pick your favorites or let us match your theme — from cozy to luxury.</p>
+          </div>
+          <div class="card">
+            <h3>Made for photos</h3>
+            <p>Everything is designed to look as good as it tastes. Yes, it’s that cute.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="section" id="gallery">
+    <!-- MENU -->
+    <section id="menu" class="section sectionAlt">
       <div class="container">
         <div class="sectionHead">
-          <h2>Gallery</h2>
-          <p>Soft, warm, aesthetic — the kind of setup people actually post.</p>
+          <h2>Menu</h2>
+          <p class="muted">A few crowd favorites. We can customize for your event.</p>
         </div>
 
-        <div class="gallery">
-          <div class="g g1"><span class="gLabel">latte art</span></div>
-          <div class="g g2"><span class="gLabel">cute setup</span></div>
-          <div class="g g3"><span class="gLabel">iced drinks</span></div>
-          <div class="g g4"><span class="gLabel">matcha moment</span></div>
-          <div class="g g5"><span class="gLabel">event vibes</span></div>
-          <div class="g g6"><span class="gLabel">girls’ day</span></div>
+        <div class="menuGrid">
+          <div class="menuCard">
+            <div class="menuTitle">Espresso Classics</div>
+            <ul class="menuList">
+              <li>Latte</li>
+              <li>Vanilla latte</li>
+              <li>Caramel latte</li>
+              <li>Mocha</li>
+              <li>Americano</li>
+            </ul>
+          </div>
+
+          <div class="menuCard">
+            <div class="menuTitle">Iced + Refreshers</div>
+            <ul class="menuList">
+              <li>Iced latte</li>
+              <li>Cold brew (when available)</li>
+              <li>Strawberry refresher</li>
+              <li>Peach refresher</li>
+              <li>Seasonal specials</li>
+            </ul>
+          </div>
+
+          <div class="menuCard">
+            <div class="menuTitle">Add-ons</div>
+            <ul class="menuList">
+              <li>Oat / Almond milk</li>
+              <li>Extra espresso shot</li>
+              <li>Whip + drizzle</li>
+              <li>Flavor syrups</li>
+              <li>Custom menu sign</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="taglineRow taglineRow--center">
-          <span class="tag">because every event deserves good coffee</span>
-          <span class="tag">good energy only</span>
-          <span class="tag">sip confident</span>
+        <p class="tiny muted center">
+          Menu varies by event size and package. We’ll confirm everything when you book.
+        </p>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2>Events</h2>
+          <p class="muted">Pop-ups, markets, and private events. Let’s make it unforgettable.</p>
+        </div>
+
+        <div class="cards2">
+          <div class="card">
+            <h3>Private bookings</h3>
+            <p>Weddings, birthdays, showers, corporate events. We’ll match your theme and guest count.</p>
+          </div>
+          <div class="card">
+            <h3>Pop-ups + markets</h3>
+            <p>We love community events. Send us the details and we’ll confirm availability.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BOOK / CONTACT -->
-    <section class="section section--alt" id="book">
+    <section id="book" class="section sectionAlt">
       <div class="container contactGrid">
-        <div class="sectionHead">
-          <h2>Book Espresso Yourself</h2>
-          <p>Send the details. We’ll reply with availability and a quote.</p>
-        </div>
+        <div class="contactLeft">
+          <div class="sectionHead">
+            <h2>Book Espresso Yourself</h2>
+            <p class="muted">Tell us what you’re planning and we’ll reply with options + pricing.</p>
+          </div>
 
-        <div class="contactCards">
-          <div class="contactCard">
-            <div class="contactTitle">Email</div>
-            <div class="contactBig">
-              <a href="mailto:espressoxavier@gmail.com">espressoxavier@gmail.com</a>
+          <div class="infoStack">
+            <div class="infoItem">
+              <div class="infoTop">Fast reply</div>
+              <div class="infoBottom">Usually within 24–48 hours</div>
             </div>
-            <div class="muted">Fastest way to book events</div>
-          </div>
-
-          <div class="contactCard">
-            <div class="contactTitle">Quick vibe check</div>
-            <div class="contactBig">“Sip pretty.”</div>
-            <div class="muted">We’ll match your theme</div>
-          </div>
-
-          <div class="contactCard">
-            <div class="contactTitle">Mobile</div>
-            <div class="contactBig">We come to you</div>
-            <div class="muted">Events • pop-ups • markets</div>
+            <div class="infoItem">
+              <div class="infoTop">Email</div>
+              <div class="infoBottom"><a href="mailto:espressoxavier@gmail.com">espressoxavier@gmail.com</a></div>
+            </div>
           </div>
         </div>
 
-       <form class="form"
-      name="booking"
-      method="POST"
-      action="/success.html"
-      data-netlify="true"
-      netlify-honeypot="bot-field">
+        <!-- NETLIFY FORM -->
+        <form class="form"
+  name="booking"
+  method="POST"
+  action="/success.html"
+  data-netlify="true"
+  netlify-honeypot="bot-field">
 
-  <input type="hidden" name="form-name" value="booking" />
-  <p class="hidden">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+ 
 
-          <div class="formRow">
+
+
+          <input type="hidden" name="form-name" value="booking" />
+
+          <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="row">
             <label>
               Name
-              <input required name="name" placeholder="Your name" />
+              <input name="name" required placeholder="Your name" />
             </label>
             <label>
               Email
-              <input required name="email" type="email" placeholder="you@email.com" />
+              <input name="email" type="email" required placeholder="you@email.com" />
             </label>
           </div>
 
-          <div class="formRow">
+          <div class="row">
             <label>
               Event date
-              <input name="date" type="date" />
+              <input name="date" type="date" required />
             </label>
             <label>
               Event type
-              <select name="type">
-                <option>Bridal shower</option>
-                <option>Baby shower</option>
+              <select name="type" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Wedding</option>
                 <option>Birthday</option>
-                <option>Brand pop-up</option>
-                <option>Market / community event</option>
+                <option>Bridal shower</option>
+                <option>Corporate</option>
+                <option>Market / Pop-up</option>
                 <option>Other</option>
               </select>
             </label>
           </div>
 
           <label>
-            Location (city/area)
-            <input name="location" placeholder="City / area" />
+            Location / city
+            <input name="location" required placeholder="San Antonio, TX" />
           </label>
 
           <label>
-            Tell us what you’re planning
-            <textarea required name="message" rows="5" placeholder="Guest count, vibe/theme, time window, and any must-have drinks…"></textarea>
+            Message
+            <textarea name="message" rows="5" required placeholder="Guest count, time, theme, anything you want us to know..."></textarea>
           </label>
 
           <div class="formActions">
             <button class="btn" type="submit">Send request</button>
-            <a class="btn btn--ghost" href="mailto:espressoxavier@gmail.com">Or email us</a>
+            <a class="btn btn--ghost" href="mailto:espressoxavier@gmail.com?subject=Espresso%20Yourself%20Booking%20Inquiry">Or email us</a>
           </div>
 
-          <p class="formNote" id="formNote" aria-live="polite"></p>
           <p class="tiny muted">
-            This form is a demo right now. When you’re ready, I can connect it to Formspree or Netlify Forms so messages go to your email automatically.
+            By submitting, you’re sending your details to Espresso Yourself for booking follow-up.
           </p>
         </form>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container footerGrid">
-        <div>
-          <div class="brandFooter">☕ Espresso Yourself</div>
-          <div class="muted">© <span id="year"></span> Espresso Yourself. All rights reserved.</div>
-        </div>
-        <div class="footerLinks">
-          <a href="#menu">Menu</a>
-          <a href="#events">Events</a>
-          <a href="#book">Book</a>
-        </div>
-      </div>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <div class="container footerRow">
+      <div class="footLeft">
+        <span class="logoDot"></span>
+        <span>Espresso Yourself</span>
+      </div>
+      <div class="footRight">
+        <span>© <span id="year"></span></span>
+        <a href="mailto:espressoxavier@gmail.com">espressoxavier@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
