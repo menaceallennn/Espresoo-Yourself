@@ -49,16 +49,115 @@ a{ color:inherit; text-decoration:none; }
 .navLinks a:hover{ color:var(--text); background: rgba(255,255,255,.06); }
 .pill{ background: rgba(255,255,255,.08) !important; color:var(--text) !important; border:1px solid var(--line); }
 
-.hero{ padding:64px 0 34px; }
-.heroGrid{
-  display:grid; gap:22px;
-  grid-template-columns: 1.15fr .85fr;
-}
-@media (max-width: 900px){
-  .heroGrid{ grid-template-columns:1fr; }
-  .navLinks{ display:none; }
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  padding: 64px 0 34px;
 }
 
+.heroGrid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+}
+
+/* HERO IMAGE */
+.heroImage {
+  position: relative;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* HERO TEXT */
+.tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.04;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.hero .sub {
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+/* CTA ROW */
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.statTop {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.statBottom {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImage img {
+    max-height: 360px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .navLinks {
+    display: none;
+  }
+}
+}
 .tag{
   display:inline-block;
   padding:8px 12px;
